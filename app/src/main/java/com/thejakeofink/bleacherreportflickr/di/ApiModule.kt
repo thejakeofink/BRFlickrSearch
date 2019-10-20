@@ -19,7 +19,7 @@ class ApiModule {
     @Provides
     fun api(okHttpClient: OkHttpClient): BRFlickrApi {
         return Retrofit.Builder()
-            .baseUrl("https://www.flickr.com/services/api/")
+            .baseUrl("https://www.flickr.com/services/rest/")
             .client(okHttpClient)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(MoshiConverterFactory.create())
