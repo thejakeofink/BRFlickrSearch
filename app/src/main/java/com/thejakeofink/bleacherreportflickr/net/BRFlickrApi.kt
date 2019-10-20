@@ -1,0 +1,3 @@
+package com.thejakeofink.bleacherreportflickr.net
+
+interface BRFlickrApi
