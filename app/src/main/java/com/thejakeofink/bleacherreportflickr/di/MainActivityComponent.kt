@@ -1,6 +1,8 @@
 package com.thejakeofink.bleacherreportflickr.di
 
 import com.thejakeofink.bleacherreportflickr.MainActivity
+import com.thejakeofink.bleacherreportflickr.net.ApiHelper
+import com.thejakeofink.bleacherreportflickr.net.FlickrApiHelper
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -28,6 +30,9 @@ object MainActivityModule {
         @Binds
         abstract fun listProvider(impl: RxListProvider):
                 PolyAdapter.ItemProvider
+
+        @Binds
+        abstract fun apiHelperProvider(impl: FlickrApiHelper): ApiHelper
     }
 }
 

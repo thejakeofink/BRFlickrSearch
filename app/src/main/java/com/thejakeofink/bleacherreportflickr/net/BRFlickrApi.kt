@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface BRFlickrApi {
 
-    @POST("")
+    @POST(".")
     @FormUrlEncoded
     fun getPhotos(
         @FieldMap params: Map<String, String>): Single<SearchModel>

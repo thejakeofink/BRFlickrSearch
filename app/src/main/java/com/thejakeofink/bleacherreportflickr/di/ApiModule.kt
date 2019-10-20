@@ -1,5 +1,6 @@
 package com.thejakeofink.bleacherreportflickr.di
 
+import com.squareup.moshi.Moshi
 import com.thejakeofink.bleacherreportflickr.net.BRFlickrApi
 import dagger.Module
 import dagger.Provides
@@ -18,6 +19,8 @@ class ApiModule {
 
     @Provides
     fun api(okHttpClient: OkHttpClient): BRFlickrApi {
+        val moshi = Moshi.Builder()
+
         return Retrofit.Builder()
             .baseUrl("https://www.flickr.com/services/rest/")
             .client(okHttpClient)
